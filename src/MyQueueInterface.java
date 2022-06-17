@@ -1,5 +1,5 @@
 public interface MyQueueInterface<E> {
-    public boolean add(E item);
-    public E peek();
-    public E poll();
+    public void add(int item);
+    public Integer peek();
+    public Integer poll();
 }
