@@ -1,5 +1,6 @@
 import java.util.Arrays;
 
+// Queue implementation using arrays
 public class MyQueue implements MyQueueInterface{
 
     private int[] queue;
