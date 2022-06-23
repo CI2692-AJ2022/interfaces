@@ -4,23 +4,26 @@ general behavior of the functions. The body is described in every class which
 implement it
 * */
 
-public interface MyQueueInterface {
+public interface MyQueueInterface<T> {
     /**
      * Insert an element at Queue's Peek
+     *
      * @param item Element to insert
      */
-    public void add(int item);
+    void add(T item);
 
     /**
      * Remove the element at Queue's Peek.
      * Applying FIFO (First In First Out)
+     *
      * @return Element deleted
      */
-    public Integer peek();
+    public T peek();
 
     /**
      * Show the element at Stack's Peek
+     *
      * @return First element added
      */
-    public Integer poll();
+    public T poll();
 }
