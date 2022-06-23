@@ -13,12 +13,12 @@ public class MyQueue implements MyQueueInterface{
         return queue.length;
     }
     @Override
-    public void add(int item) {
+    public void add(Object item) {
         // New array to keep the first elements and new added, the original is static
         int[] newArray = new int[queue.length + 1];
 
         // The new element is added at ending of array for FIFO property
-        newArray[queue.length] = item;
+        newArray[queue.length] =(int) item;
 
         // Adding original elements to new queue
         for(int i = 0; i < queue.length; i++) {
@@ -27,6 +27,7 @@ public class MyQueue implements MyQueueInterface{
         // Original queue is replaced
         queue = newArray;
     }
+
 
     @Override
     public Integer peek() {
