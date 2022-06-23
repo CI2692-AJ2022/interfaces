@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class MyQueue implements MyQueueInterface{
+public class MyQueue implements MyQueueInterface<Integer>{
 
     private int[] queue;
 
@@ -8,8 +8,7 @@ public class MyQueue implements MyQueueInterface{
         this.queue = new int[0];
     }
 
-    @Override
-    public void add(int item) {
+    public void add(Integer item) {
         int[] newArray = new int[queue.length + 1];
         newArray[queue.length] = item;
         for(int i = 0; i < queue.length; i++) {
@@ -18,7 +17,6 @@ public class MyQueue implements MyQueueInterface{
         queue = newArray;
     }
 
-    @Override
     public Integer peek() {
         if(queue.length > 0) {
             return queue[0];
@@ -26,7 +24,6 @@ public class MyQueue implements MyQueueInterface{
         return null;
     }
 
-    @Override
     public Integer poll() {
         if(queue.length > 0) {
             int valueToReturn = queue[0];

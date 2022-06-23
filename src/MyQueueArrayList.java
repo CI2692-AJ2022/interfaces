@@ -1,20 +1,24 @@
 import java.util.ArrayList;
 
-public class MyQueueArrayList implements MyQueueInterface{
-    private ArrayList<Integer> queue = new ArrayList<Integer>();
+public class MyQueueArrayList implements MyQueueInterface<Employee>{
+    private ArrayList<Employee> queue = new ArrayList<>();
 
     @Override
-    public void add(int item) {
+    public void add(Employee item) {
         queue.add(item);
     }
 
     @Override
-    public Integer peek() {
+    public Employee peek() {
         return queue.size() > 0 ? queue.get(0): null;
     }
 
     @Override
-    public Integer poll() {
+    public Employee poll() {
         return queue.size() > 0 ? queue.remove(0): null;
+    }
+
+    public int size() {
+        return queue.size();
     }
 }
