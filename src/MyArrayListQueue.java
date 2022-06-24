@@ -1,15 +1,14 @@
 import java.util.ArrayList;
 
+
 /**
- * Class to use a generic ArrayList Queue for every Type of data and
+ * Class to use a generic ArrayList Queue for employee data and
  * implement the interface of Queue.
- *
- * @param <T> Type of data to keep in queue
  */
-public class MyArrayListQueue<T> implements MyQueueInterface {
+public class MyArrayListQueue implements MyQueueInterface<Employee> {
 
     // Initialization
-    private final ArrayList<T> queueArrayList;
+    private final ArrayList<Employee> queueArrayList;
 
     // Constructor
     public MyArrayListQueue(){
@@ -23,13 +22,13 @@ public class MyArrayListQueue<T> implements MyQueueInterface {
 
 
     @Override
-    public void add(Object item) {
+    public void add(Employee item) {
         // Using properties of ArrayList object, because it has dynamic size
-        queueArrayList.add((T) item);
+        queueArrayList.add( item);
     }
 
     @Override
-    public T peek() {
+    public Employee peek() {
         // Verify is queue is empty
         if(queueArrayList.size() > 0) {
             // Show the first element added, for FIFO property
@@ -39,11 +38,11 @@ public class MyArrayListQueue<T> implements MyQueueInterface {
     }
 
     @Override
-    public T poll() {
+    public Employee poll() {
         // Verify is queue is empty
         if(queueArrayList.size() > 0) {
             // Select first element added, because is the first element out
-            T valueToReturn = queueArrayList.get(0);
+            Employee valueToReturn = queueArrayList.get(0);
             // Delete the element, and replace the original
             queueArrayList.remove(0);
             return valueToReturn;
