@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
-public class MyQueue implements MyQueueInterface{
+
+public class MyQueue implements MyQueueInterface<Integer> {
 
     private int[] queue;
 
@@ -8,24 +9,26 @@ public class MyQueue implements MyQueueInterface{
         this.queue = new int[0];
     }
 
-    public int size(){
+    public int size() {
         return queue.length;
     }
+
     @Override
-    public void add(Object item) {
+    public void add(Integer item) {
         // New array to keep the first elements and new added, the original is static
         int[] newArray = new int[queue.length + 1];
 
         // The new element is added at ending of array for FIFO property
-        newArray[queue.length] =(int) item;
+        newArray[queue.length] = item;
 
         // Adding original elements to new queue
-        for(int i = 0; i < queue.length; i++) {
-            newArray[i] = queue[i];
-        }
+        System.arraycopy(queue, 0, newArray, 0, queue.length);
+
         // Original queue is replaced
         queue = newArray;
     }
+
+
 
 
     @Override
