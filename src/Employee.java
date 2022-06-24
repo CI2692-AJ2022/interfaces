@@ -5,7 +5,7 @@ import java.util.ArrayList;
  */
 public class Employee {
 
-    // Initialization of atributes for each employee
+    // Initialization of attributes for each employee
     private String name;
     private int age;
     private int salary;
@@ -82,7 +82,7 @@ public class Employee {
      */
     public int employeesOldLowerRecursive(Employee person){
         // ArrayList Queue to keep all the subordinates of person
-        MyArrayListQueue<Employee> subordinates = new MyArrayListQueue<>();
+        MyArrayListQueue subordinates = new MyArrayListQueue();
         int count =0;
 
         // For the immediately subordinate verify the condition and change count
