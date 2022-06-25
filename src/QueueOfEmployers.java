@@ -2,17 +2,17 @@
 import java.util.ArrayList;
 
 public class QueueOfEmployers  {
-    ArrayList<Jefe> queue = new ArrayList<Jefe>();
+    ArrayList<Employer> queue = new ArrayList<Employer>();
 
     
-    public void add(Jefe item) {
+    public void add(Employer item) {
         queue.add(item);
     }
 
     
-    public Jefe poll() {
+    public Employer poll() {
         if(queue.size() > 0) {
-            Jefe element = queue.get(0);
+            Employer element = queue.get(0);
             queue.remove(0);
             return element;
         } else {
@@ -21,7 +21,7 @@ public class QueueOfEmployers  {
     }
     
     
-    public Jefe peek() {
+    public Employer peek() {
         if(queue.size() > 0) {
             return queue.get(0);
         } else {
