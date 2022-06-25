@@ -1,3 +1,5 @@
+// Stack implementation with a normal array
+
 public class MyStack implements MyStackInterface {
     private int[] stack = new int[0];
 
