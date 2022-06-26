@@ -1,5 +1,5 @@
-public interface MyStackInterface<E> {
-    public void push (E item);
-    public E pop();
-    public E peek();
+public interface MyStackInterface {
+    public void push (int item);
+    public int pop();
+    public int peek();
 }
